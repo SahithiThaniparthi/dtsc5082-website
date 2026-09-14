@@ -1,0 +1,158 @@
+/* ==========================================
+   1. Global Variables & Resets
+   ========================================== */
+:root {
+    /* Color Palette: Warm & Earthy */
+    --bg-color: #fcf9f2;          /* Soft warm cream background */
+    --card-bg: #f3ece1;           /* Warm beige container background */
+    --text-color: #2b2625;        /* Dark slate espresso text */
+    --primary-color: #a04e32;     /* Warm terracotta accent */
+    --secondary-color: #556b2f;   /* Muted sage green accent */
+    --border-color: #e2d7c5;      /* Earthy subtle border */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Common Layout Container */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ==========================================
+   2. Header & Bio
+   ========================================== */
+.site-header {
+    background-color: var(--card-bg);
+    border-bottom: 2px solid var(--border-color);
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+}
+
+.site-header h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.site-header .bio {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 550px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* ==========================================
+   3. Main Sections
+   ========================================== */
+main {
+    padding: 3rem 1.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-family: 'Lora', serif;
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+/* ==========================================
+   4. Interests Section
+   ========================================== */
+.interests-grid {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.interests-grid li {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+/* ==========================================
+   5. Contact Section
+   ========================================== */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section p {
+    margin-bottom: 0.75rem;
+}
+
+.contact-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* ==========================================
+   6. Footer
+   ========================================== */
+.site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    color: #6e655f;
+    border-top: 1px solid var(--border-color);
+}
+
+/* ==========================================
+   7. Mobile Responsive Adjustments
+   ========================================== */
+@media (max-width: 600px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+
+    .site-header .bio {
+        font-size: 1.05rem;
+    }
+
+    .interests-grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .interests-grid li {
+        text-align: center;
+    }
+}
